@@ -6,10 +6,10 @@
             "generator": "Ninja",
             "binaryDir": "build",
             "cacheVariables": {
-                "CMAKE_C_COMPILER": "C:/Program Files/LLVM/bin/clang.exe",
-                "CMAKE_CXX_COMPILER": "C:/Program Files/LLVM/bin/clang++.exe",
+                "CMAKE_C_COMPILER": "C:/Program Files/LLVM/bin/clang-cl.exe",
+                "CMAKE_CXX_COMPILER": "C:/Program Files/LLVM/bin/clang-cl.exe",
+                "CMAKE_RC_COMPILER": "C:/Program Files/LLVM/bin/llvm-rc.exe",
                 "CMAKE_TOOLCHAIN_FILE": "C:/kepler/vcpkg/scripts/buildsystems/vcpkg.cmake",
-                "CMAKE_RC_COMPILER": "C:/Program Files (x86)/Windows Kits/10/bin/10.0.26100.0/x64/rc.exe",
                 "VCPKG_TARGET_TRIPLET": "x64-windows",
                 "CMAKE_BUILD_TYPE": "Release",
                 "BUILD_TESTING": "OFF",
@@ -26,7 +26,7 @@
                 "CMAKE_PREFIX_PATH": "C:/Program Files (x86)/jrl-cmakemodules/share/cmake",
                 "CMAKE_CXX_FLAGS": {
                     "type": "STRING",
-                    "value": "-DWIN32 -DNOMINMAX"
+                    "value": "/DWIN32 /DNOMINMAX /std:c++20 /EHsc /MDd"
                 }
             }
         }
