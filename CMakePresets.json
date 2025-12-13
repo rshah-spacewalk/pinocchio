@@ -13,6 +13,7 @@
                 "VCPKG_TARGET_TRIPLET": "x64-windows-static",
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded",
+                "BUILD_SHARED_LIBS": "OFF",
                 "BUILD_TESTING": "OFF",
                 "BUILD_UNIT_TESTS": "OFF",
                 "BUILD_ADVANCED_TESTING": "OFF",
@@ -25,6 +26,9 @@
                 "BUILD_WITH_OPENMP_SUPPORT": "OFF",
                 "BUILD_PYTHON_INTERFACE": "OFF",
                 "CMAKE_PREFIX_PATH": "C:/Program Files (x86)/jrl-cmakemodules/share/cmake"
+            },
+            "environment": {
+                "PATH": "C:/Program Files (x86)/pinocchio/bin;C:/Program Files (x86)/hpp-fcl\bin;$PATH"
             }
         }
     ]
