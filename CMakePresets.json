@@ -6,6 +6,7 @@
             "generator": "Ninja",
             "binaryDir": "build",
             "cacheVariables": {
+                "CMAKE_PREFIX_PATH": "C:/Program Files (x86)/jrl-cmakemodules/share/cmake",
                 "CMAKE_C_COMPILER": "C:/Program Files/LLVM/bin/clang-cl.exe",
                 "CMAKE_CXX_COMPILER": "C:/Program Files/LLVM/bin/clang-cl.exe",
                 "CMAKE_RC_COMPILER": "C:/Program Files/LLVM/bin/llvm-rc.exe",
@@ -24,11 +25,7 @@
                 "COAL_DISABLE_HPP_FCL_WARNINGS": "ON",
                 "BUILD_WITH_ACCELERATE_SUPPORT": "ON",
                 "BUILD_WITH_OPENMP_SUPPORT": "OFF",
-                "BUILD_PYTHON_INTERFACE": "OFF",
-                "CMAKE_PREFIX_PATH": "C:/Program Files (x86)/jrl-cmakemodules/share/cmake"
-            },
-            "environment": {
-                "PATH": "C:/Program Files (x86)/pinocchio/bin;C:/Program Files (x86)/hpp-fcl\bin;$PATH"
+                "BUILD_PYTHON_INTERFACE": "OFF"
             }
         }
     ]
