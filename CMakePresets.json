@@ -2,19 +2,9 @@
     "version": 3,
     "configurePresets": [
         {
-            "name": "win",
-            "generator": "Ninja",
-            "binaryDir": "build",
+            "name": "base-common",
+            "hidden": true,
             "cacheVariables": {
-                "CMAKE_PREFIX_PATH": "C:/Program Files (x86)/jrl-cmakemodules/share/cmake",
-                "CMAKE_C_COMPILER": "C:/Program Files/LLVM/bin/clang-cl.exe",
-                "CMAKE_CXX_COMPILER": "C:/Program Files/LLVM/bin/clang-cl.exe",
-                "CMAKE_RC_COMPILER": "C:/Program Files/LLVM/bin/llvm-rc.exe",
-                "CMAKE_TOOLCHAIN_FILE": "C:/kepler/vcpkg/scripts/buildsystems/vcpkg.cmake",
-                "VCPKG_TARGET_TRIPLET": "x64-windows-static",
-                "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded",
-                "BUILD_SHARED_LIBS": "OFF",
                 "BUILD_TESTING": "OFF",
                 "BUILD_UNIT_TESTS": "OFF",
                 "BUILD_ADVANCED_TESTING": "OFF",
@@ -26,6 +16,37 @@
                 "BUILD_WITH_ACCELERATE_SUPPORT": "ON",
                 "BUILD_WITH_OPENMP_SUPPORT": "OFF",
                 "BUILD_PYTHON_INTERFACE": "OFF"
+            }
+        },
+        {
+            "name": "win",
+            "inherits": "base-common",
+            "generator": "Ninja",
+            "binaryDir": "build",
+            "cacheVariables": {
+                "CMAKE_PREFIX_PATH": "C:/Program Files (x86)/jrl-cmakemodules/share/cmake",
+                "CMAKE_C_COMPILER": "C:/Program Files/LLVM/bin/clang-cl.exe",
+                "CMAKE_CXX_COMPILER": "C:/Program Files/LLVM/bin/clang-cl.exe",
+                "CMAKE_RC_COMPILER": "C:/Program Files/LLVM/bin/llvm-rc.exe",
+                "CMAKE_TOOLCHAIN_FILE": "C:/kepler/vcpkg/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "x64-windows-static",
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded",
+                "BUILD_SHARED_LIBS": "OFF"
+            }
+        },
+        {
+            "name": "linux",
+            "inherits": "base-common",
+            "displayName": "Clang 20.1.8 x86_64-pc-linux-gnu",
+            "description": "Using compilers: C = /usr/bin/clang, CXX = /usr/bin/clang++",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_C_COMPILER": "/usr/bin/clang",
+                "CMAKE_CXX_COMPILER": "/usr/bin/clang++",
+                "CMAKE_TOOLCHAIN_FILE": "/home/ravi/spacewalk/kepler/vcpkg/scripts/buildsystems/vcpkg.cmake",
+                "CMAKE_INSTALL_PREFIX": "/opt/gravity",
+                "CMAKE_PREFIX_PATH": "/opt/gravity"
             }
         }
     ]
