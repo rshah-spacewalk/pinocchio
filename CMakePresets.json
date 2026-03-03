@@ -48,6 +48,21 @@
                 "CMAKE_INSTALL_PREFIX": "/opt/gravity",
                 "CMAKE_PREFIX_PATH": "/opt/gravity"
             }
+        },
+        {
+            "name": "mac",
+            "generator": "Ninja",
+            "inherits": "base-common",
+            "binaryDir": "${sourceDir}/build",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "/Users/ravikumarshah/vcpkg/scripts/buildsystems/vcpkg.cmake",
+                "VCPKG_TARGET_TRIPLET": "arm64-osx",
+                "CMAKE_INSTALL_PREFIX": "/opt/gravity",
+                "CMAKE_PREFIX_PATH": "/opt/gravity",
+                "CMAKE_MAKE_PROGRAM": "/opt/homebrew/bin/ninja",
+                "CMAKE_CXX_COMPILER": "/usr/bin/g++",
+                "CMAKE_C_COMPILER": "/usr/bin/gcc"
+            }
         }
     ]
 }
